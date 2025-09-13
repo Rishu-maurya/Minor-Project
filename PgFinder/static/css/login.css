@@ -1,0 +1,120 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body with blurred PG room background */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  backdrop-filter: blur(8px);  /* blur background */
+  z-index: 0;
+}
+ 
+.transparent-css {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1); /* Very light white with opacity */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.userpass-css {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.username-css {
+  height: 45px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  padding-left: 10px;
+}
+
+.password-css {
+  height: 45px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  padding-left: 10px;
+}
+
+.login-css {
+  height: 45px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  font-size: large;
+  font-weight: bold;
+  background-color: lightgreen;
+  color: white;
+  text-shadow:
+    -1px -1px 0 rgb(54, 132, 54),
+     1px -1px 0 rgb(54, 132, 54),
+    -1px  1px 0 rgb(54, 132, 54),
+     1px  1px 0 rgb(54, 132, 54);
+}
+
+.hyperlink-css{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.clint-css {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: end;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.owner-css {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+  padding-left: 40px;
+}

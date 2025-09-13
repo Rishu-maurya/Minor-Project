@@ -1,0 +1,86 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body with blurred PG room background */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  backdrop-filter: blur(8px);  /* blur background */
+  z-index: 0;
+}
+ 
+.transparent-css {
+  width: 170vh;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.616); /* Very light white with opacity */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.left-css {
+  height: auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  align-content: start;
+  margin-bottom: 15px;
+  width: 200px;
+  text-align:start;
+}
+
+.right-css {
+  height: auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-content: start;
+  margin-bottom: 15px;
+  width: 200px;
+  text-align:start;
+  align-items: start;
+  margin-left: 550px; 
+}
+
+.firstname, .lastname, .phone, .city, .pincode, .email, .password, .address, .profile, .DOB, .username, .aadhar{
+  height: 30px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+
+.scrollable-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.scrollable-content label input {
+    margin-bottom: 20px;
+  }
